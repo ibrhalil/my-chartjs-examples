@@ -9,7 +9,7 @@ import {
 	Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { randomCities, randomInteger } from "../../utils/RandomData";
+import { randomInteger, randomTrPeople } from "../../utils/RandomData";
 
 ChartJS.register(
 	CategoryScale,
@@ -20,21 +20,26 @@ ChartJS.register(
 	Tooltip,
 	Legend,
 );
-const Chart2 = () => {
+const Chart3 = () => {
 	const options = {};
 
-	const labels = randomCities(15);
+	const labels = randomTrPeople(10);
 
 	const data = {
 		labels: labels,
 		datasets: [
 			{
-				label: "city",
-				data: labels.map(() => randomInteger(10, 90)),
-				fill: false,
-				backgroundColor: "rgba(222, 44, 12, 0.2)",
+				label: "index",
+				data: labels.map(() => randomInteger(-18, 32)),
+				//fill: true,
+				backgroundColor: "rgba(255, 99, 142, 0.2)",
 				borderColor: "rgba(222, 44, 12, 1)",
 				borderWidth: 1,
+				fill: {
+					target: "origin",
+					above: "rgba(75, 192, 192, 0.2)", // üstteki
+					below: "rgba(255, 99, 132, 0.2)", // alttaki
+				},
 			},
 		],
 	};
@@ -42,4 +47,4 @@ const Chart2 = () => {
 	return <Line options={options} data={data} />;
 };
 
-export default Chart2;
+export default Chart3;

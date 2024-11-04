@@ -21,41 +21,29 @@ ChartJS.register(
 	Legend,
 );
 const Chart1 = () => {
-	const options = {};
-
-	const labels = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-	];
-
 	const data = {
-		labels: labels,
+		labels: [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+		],
 		datasets: [
 			{
-				label: "Dataset 1",
-				data: labels.map(() => faker.number.int({ min: -10, max: 80 })),
+				label: "dataset",
+				data: [10, 20, 30, 15, 45, 25, 30],
 				fill: true,
 				backgroundColor: "rgba(222, 44, 192, 0.2)",
 				borderColor: "rgba(222, 44, 192, 1)",
 				borderWidth: 1,
 			},
-			{
-				label: "Dataset 2",
-				data: labels.map(() => faker.number.int({ min: 0, max: 90 })),
-				fill: true,
-				backgroundColor: "rgba(33, 222, 192, 0.2)",
-				borderColor: "rgba(33, 222, 192, 1)",
-				borderWidth: 1,
-			},
 		],
 	};
 
-	return <Line options={options} data={data} />;
+	return <Line options={{}} data={data} />;
 };
 
 export default Chart1;

@@ -8,7 +8,6 @@ function App() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
-	console.log("navigate", navigate);
 	return (
 		<div className="container mt-3">
 			<Tabs
