@@ -1,0 +1,4 @@
+.nav-link.active {
+	background-color: #005dc0 !important; /* Seçili tab için arka plan rengi */
+	color: white !important; /* Seçili tab için yazı rengi */
+}
