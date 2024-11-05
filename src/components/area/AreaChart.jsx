@@ -8,6 +8,11 @@ import Chart6 from "./Chart6";
 import Chart7 from "./Chart7";
 import Chart8 from "./Chart8";
 import Chart9 from "./Chart9";
+import Chart10 from "./Chart10";
+import Chart11 from "./Chart11";
+import Chart12 from "./Chart12";
+import Chart13 from "./Chart13";
+import Chart14 from "./Chart14";
 
 const AreaChart = () => {
 	return (
@@ -120,6 +125,61 @@ const AreaChart = () => {
 							</Card.Body>
 							<Card.Footer>
 								<Card.Text>Same 8. Chart</Card.Text>
+							</Card.Footer>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-3">
+						<Card className="p-3">
+							<Card.Body>
+								<Card.Title>10. Chart</Card.Title>
+								<Chart10 />
+							</Card.Body>
+							<Card.Footer>
+								<Card.Text>Radar</Card.Text>
+							</Card.Footer>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-3">
+						<Card className="p-3">
+							<Card.Body>
+								<Card.Title>11. Chart</Card.Title>
+								<Chart11 />
+							</Card.Body>
+							<Card.Footer>
+								<Card.Text>dummy</Card.Text>
+							</Card.Footer>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-3">
+						<Card className="p-3">
+							<Card.Body>
+								<Card.Title>12. Chart</Card.Title>
+								<Chart12 />
+							</Card.Body>
+							<Card.Footer>
+								<Card.Text>dummy</Card.Text>
+							</Card.Footer>
+						</Card>
+					</Col>
+					<Col md={6} className="mb-3">
+						<Card className="p-3">
+							<Card.Body>
+								<Card.Title>13. Chart</Card.Title>
+								<Chart13 />
+							</Card.Body>
+							<Card.Footer>
+								<Card.Text>dummy</Card.Text>
+							</Card.Footer>
+						</Card>
+					</Col>
+					<Col md={6} className="mb-3">
+						<Card className="p-3">
+							<Card.Body>
+								<Card.Title>14. Chart</Card.Title>
+								<Chart14 />
+							</Card.Body>
+							<Card.Footer>
+								<Card.Text>dummy</Card.Text>
 							</Card.Footer>
 						</Card>
 					</Col>
