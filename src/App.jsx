@@ -3,6 +3,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
 import AreaChart from "./components/area/AreaChart";
 import Home from "./components/home/Home";
+import BarChart from "./components/bar/BarChart";
 
 function App() {
 	const navigate = useNavigate();
@@ -29,6 +30,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/area" element={<AreaChart />} />
+				<Route path="/bar" element={<BarChart />} />
 			</Routes>
 		</div>
 	);
