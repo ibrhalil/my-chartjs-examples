@@ -1,12 +1,13 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import basicSsl from "@vitejs/plugin-basic-ssl";
 
 // https://vite.dev/config/
 export default defineConfig({
 	server: {
-		//https: false, // HTTPS'i kapatın
-		port: 3000, // İsteğe bağlı olarak portu belirleyin
+		https: true,
+		port: 3000,
 		open: false,
 	},
-	plugins: [react()],
+	plugins: [react(), basicSsl()],
 });
