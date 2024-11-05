@@ -5,6 +5,7 @@ import {
 	LineElement,
 	PointElement,
 	RadialLinearScale,
+	Title,
 	Tooltip,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
@@ -16,6 +17,7 @@ ChartJS.register(
 	Filler,
 	Tooltip,
 	Legend,
+	Title,
 );
 
 const Chart14 = () => {
@@ -45,8 +47,17 @@ const Chart14 = () => {
 	};
 
 	const options = {
+		responsive: true,
+		maintainAspectRatio: true,
+		elements: {
+			line: {
+				tension: 0.3,
+			},
+		},
 		scales: {
 			r: {
+				max: 80,
+				min: 30,
 				angleLines: {
 					display: true,
 					color: "rgba(100, 200, 0, 0.2)",
@@ -64,11 +75,17 @@ const Chart14 = () => {
 				},
 				ticks: {
 					beginAtZero: false,
-					stepSize: 7,
 					backdropColor: "rgba(0, 0, 255, 0.5)",
 					color: "#f0f",
 					showLabelBackdrop: true,
+					stepSize: 7,
 				},
+			},
+		},
+		plugins: {
+			title: {
+				display: true,
+				text: "title",
 			},
 		},
 	};

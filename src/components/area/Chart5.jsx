@@ -6,9 +6,9 @@ import {
 	LinearScale,
 	LineElement,
 	PointElement,
+	Title,
 	Tooltip,
 } from "chart.js";
-import { color } from "chart.js/helpers";
 import { Line } from "react-chartjs-2";
 import { randomInteger, randomTrPeople } from "../../utils/RandomData";
 
@@ -20,6 +20,7 @@ ChartJS.register(
 	Filler,
 	Tooltip,
 	Legend,
+	Title,
 );
 const Chart5 = () => {
 	const labels = randomTrPeople(25);
@@ -94,6 +95,10 @@ const Chart5 = () => {
 		},
 		responsive: true,
 		plugins: {
+			title: {
+				display: true,
+				text: "chart",
+			},
 			tooltip: {
 				callbacks: {
 					title: (tooltipItems) => {
